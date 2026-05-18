@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── CUSTOM DECORATIONS ──────────────────────────────── */
+body {
+  background-color: #f0f4f1;
+  color: #0d1f15;
+}
+
+/* Ambient glow blobs in background */
+body::before {
+  content: '';
+  position: fixed;
+  top: -200px;
+  right: -200px;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(34, 160, 80, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  bottom: -150px;
+  left: -150px;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(232, 98, 10, 0.05) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Hide scrollbars but keep functionality */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ── LEAFLET CUSTOM STYLES ────────────────────────────── */
+.leaflet-container {
+  font-family: 'DM Sans', sans-serif !important;
+  background: #f7faf8 !important;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 18px !important;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.12) !important;
+  border: 1px solid #dde8e1 !important;
+  padding: 0 !important;
+  overflow: hidden;
+}
+
+.leaflet-popup-content {
+  margin: 0 !important;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.leaflet-popup-tip {
+  background: white !important;
+  box-shadow: 0 3px 14px rgba(0,0,0,0.1) !important;
+}
+
+/* Custom Marker Styling classes */
+.map-marker-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 50%;
+  border: 3px solid;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  font-family: 'DM Sans', sans-serif;
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+}
+
+.map-marker-div:hover {
+  transform: scale(1.18);
+}
