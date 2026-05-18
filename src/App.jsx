@@ -469,8 +469,8 @@ export default function App() {
         
         <form onSubmit={handleLogin} className="bg-white/95 backdrop-blur-md rounded-3xl p-8 md:p-12 w-full max-w-[420px] shadow-2xl relative z-10 border border-white/20 animate-fade-in">
           <div className="flex items-center gap-4 mb-6">
-            <div className="p-2.5 bg-brand-green/10 rounded-2xl">
-              <span className="text-3xl">🌱</span>
+            <div className="p-1 bg-white border border-brand-green/10 rounded-2xl shadow-sm">
+              <img src="/shriram_bioseed_logo.png" alt="Shriram Bioseed Logo" className="h-12 w-12 object-contain" />
             </div>
             <div>
               <h1 className="text-xl font-extrabold text-brand-green tracking-tight leading-none">Shriram Bioseed</h1>
@@ -533,10 +533,10 @@ export default function App() {
   if (loading) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center bg-brand-bg">
-        <div className="relative w-16 h-16 mb-4 flex items-center justify-center">
-          <div className="absolute inset-0 border-[3.5px] border-brand-green/20 rounded-full" />
+        <div className="relative w-20 h-20 mb-6 flex items-center justify-center">
+          <div className="absolute inset-0 border-[3.5px] border-brand-green/20 rounded-full animate-pulse" />
           <div className="absolute inset-0 border-[3.5px] border-brand-green rounded-full border-t-transparent animate-spin" />
-          <span className="text-2xl">🌱</span>
+          <img src="/shriram_bioseed_logo.png" alt="Loading" className="h-10 w-10 object-contain" />
         </div>
         <p className="text-sm font-bold text-brand-green tracking-wider uppercase animate-pulse">Syncing campaign database...</p>
       </div>
@@ -758,7 +758,7 @@ export default function App() {
       <header className="sticky top-0 z-40 bg-white border-b border-brand-text3/20 shadow-md">
         <div className="px-4 md:px-8 h-16 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <span className="text-3xl">🌱</span>
+            <img src="/shriram_bioseed_logo.png" alt="Shriram Bioseed Logo" className="h-10 w-10 object-contain bg-white rounded-lg p-0.5 border border-brand-green/10" />
             <div className="h-7 w-[1px] bg-brand-text3/30 hidden md:block" />
             <div className="flex flex-col leading-tight">
               <span className="text-base font-extrabold text-brand-green tracking-tight">Shriram Bioseed</span>
